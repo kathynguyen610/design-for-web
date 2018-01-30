@@ -1,3 +1,9 @@
+
+@font-face {
+font-family: Avenir Next;
+src: url(fonts/AvenirNext-Medium.ttf);
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -16,23 +22,66 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	box-sizing:border-box;
 }
 
 body {
 	display:grid;
 	grid-template-areas:
-		"header header header"
-		"nav main main";
-	grid-template-rows: 1fr 3fr;
+		"header"
+		"content";
+	grid-template-rows: 1fr 2fr;
 }
 header {
 	grid-area:header;
 	background:linear-gradient(45deg, #00A0EE, #386AFF);
+	height:300px;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+header h1 {
+	font-size:4em;
+	font-family:'Avenir Next';
+	color:#fff;
+	text-align:center;
+
 }
 nav {
 	grid-area:nav;
+	display:flex;
+	flex-direction: column;
+	font-family: 'Avenir Next';
+	padding:30px ;
+	width:50%;
+}
+
+nav a {
+	text-decoration:none;
+	font-size:1.2em;
+	line-height:1.6em;
+	color:#66666a;
+}
+
+nav a:hover {
+	color:#1e8ede;
+}
+
+nav h2 {
+	border-bottom:#eaeaea 1px solid;
+	font-size:2em;
+	line-height:1.6em;
 }
 
 main {
-	grid-area:main;
+	grid-area:content;
+	display:flex;
+	max-width:1000px;
+	margin:0 auto;
+}
+
+section {
+	padding:30px;
+
 }
