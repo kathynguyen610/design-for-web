@@ -173,8 +173,12 @@ p {
 	color:white;
 }
 
-#symbols h4 {
+h4 {
 	font-size:24px;
 	font-weight: 500;
 
+}
+
+#mobile img {
+	width:50%;
 }
